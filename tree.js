@@ -10,23 +10,18 @@ class TreeNode {
 
   /** sumValues(): add up all values of invoking node and its children.
    * Returns sum as an integer. */
+
+  // TODO: to do recursively, call sumValues for each child
+
   sumValues() {
     let sum = 0;
-    // function _getSum(){
 
-    //   if(!node.children.length) total += node.val;
-
-
-    // }
-
-    // _getSum()
     let toVisitStack = [this];
 
     while (toVisitStack.length) {
       let current = toVisitStack.pop();
 
       sum += current.val;
-      console.log(sum);
 
       for (let child of current.children)
         toVisitStack.push(child)
